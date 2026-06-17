@@ -44,20 +44,4 @@ if selected_menu:
     st.success(f"🤖 {selected_menu} 조리를 시작해 보세요!")
 else:
     st.info("왼쪽 메뉴에서 요리를 선택해 주세요.")
-    import streamlit as st
-
-# 사이드바에서 메뉴를 선택했다고 가정
-selected_menu = "갈치" 
-
-# 조리 시작 버튼 구현
-if st.button("🚀 조리 시작"):
-    st.success(f"로봇 셰프가 {selected_menu} 조리를 지원합니다! 재료 준비 되셨나요?")
     
-    # 조리 순서에 체크박스 추가
-    st.write("---")
-    step1 = st.checkbox("1. 갈치를 토막 낸다.")
-    step2 = st.checkbox("2. 노릇하게 굽는다.")
-    
-    if step1 and step2:
-        st.balloons() # 축하 폭죽 효과!
-        st.write("🎉 완벽합니다! 맛있는 요리가 완성되었습니다.")
