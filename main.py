@@ -11,24 +11,21 @@ try:
 except:
     recipe_db = {}
 
-# --- 사이드바 메뉴 구현 ---
+# 1. 사이드바 메뉴
 st.sidebar.title("📖 메뉴 목록")
-st.sidebar.write("원하는 요리를 선택하세요:")
-
-# 사이드바에서 메뉴 선택
 selected_menu = st.sidebar.radio("오늘의 요리는?", list(recipe_db.keys()))
 
-# --- 메인 화면 구현 ---
+# 2. 메인 화면
 st.title("🤖 AI 주방 로봇 셰프")
 search_query = st.text_input("🔍 무엇을 만들어 볼까요?", placeholder="요리 이름을 입력하세요")
 
-# 검색 우선순위 설정: 검색창에 입력하면 검색결과가, 없으면 사이드바에서 선택한 메뉴가 나오게 함
+# 검색 우선순위 설정
 target = search_query if search_query else selected_menu
 
 if target and target in recipe_db:
     data = recipe_db[target]
     st.divider()
-    st.header(f"🍳 {target} 조리법 (1인분)")
+    st.header(f"🍳 {target} 조리법")
     
     st.subheader("🛒 필수 재료")
     st.write(", ".join(data['ingredients']))
@@ -38,7 +35,6 @@ if target and target in recipe_db:
         st.write(f"{i}. {step}")
         
     st.success(f"{target} 조리를 시작해 보세요!")
-    
 elif search_query:
     st.warning(f"'{search_query}' 레시피를 찾을 수 없습니다.")
 else:

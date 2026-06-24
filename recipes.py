@@ -1,9 +1,6 @@
-json
+JSON
 
-# Define the complete 1-portion scaled recipe database based on the user's provided recipes.
-# Every single recipe is adjusted to a precise 1-person portion, including numbers in steps text.
-
-recipes_1portion = {
+{
   "제육볶음": {
     "ingredients": ["돼지 앞다리살 150g", "양파 1/4개", "대파 1/4대", "고추장 1큰술", "고춧가루 1큰술", "진간장 1큰술", "설탕 0.5큰술", "다진마늘 0.5큰술", "참기름 0.5큰술"],
     "steps": ["1. 돼지고기를 먹기 좋게 썬다.", "2. 팬에 식용유를 두르고 강불에 고기를 볶다가, 설탕 0.5큰술을 먼저 넣어 코팅하며 불향을 입힌다.", "3. 고기 겉면이 익으면 간장을 팬 가장자리에 눌러 향을 내고, 고추장, 고춧가루, 마늘을 넣는다.", "4. 양파와 대파를 넣고 강불에서 빠르게 볶아 수분을 날린다.", "5. 불을 끄고 참기름 0.5큰술을 두른다."]
