@@ -1,4 +1,4 @@
-import json
+json
 
 # Define the complete 1-portion scaled recipe database based on the user's provided recipes.
 # Every single recipe is adjusted to a precise 1-person portion, including numbers in steps text.
